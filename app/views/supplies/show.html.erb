@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Supplier:</strong>
+  <%= @supply.supplier_id %>
+</p>
+
+<p>
+  <strong>P location:</strong>
+  <%= @supply.p_location %>
+</p>
+
+<p>
+  <strong>D location:</strong>
+  <%= @supply.d_location %>
+</p>
+
+<p>
+  <strong>P time:</strong>
+  <%= @supply.p_time %>
+</p>
+
+<p>
+  <strong>Car:</strong>
+  <%= @supply.car %>
+</p>
+
+<p>
+  <strong>Rate per traveller:</strong>
+  <%= @supply.rate_per_traveller %>
+</p>
+
+<p>
+  <strong>S available:</strong>
+  <%= @supply.s_available %>
+</p>
+
+<p>
+  <strong>S left:</strong>
+  <%= @supply.s_left %>
+</p>
+
+<%= link_to 'Edit', edit_supply_path(@supply) %> |
+<%= link_to 'Back', supplies_path %>

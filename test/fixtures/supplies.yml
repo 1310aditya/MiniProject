@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  supplier_id: 1
+  p_location: 
+  d_location: 
+  p_time: 1
+  car: MyString
+  rate_per_traveller: 1
+  s_available: 1
+  s_left: 1
+
+two:
+  supplier_id: 1
+  p_location: 
+  d_location: 
+  p_time: 1
+  car: MyString
+  rate_per_traveller: 1
+  s_available: 1
+  s_left: 1
