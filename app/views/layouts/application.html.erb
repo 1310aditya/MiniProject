@@ -4,6 +4,16 @@
   <title>MiniProject</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'js/ie/html5shiv.js' %>
+  <%= javascript_include_tag 'js/ie/respond.min.js' %>
+  <%= javascript_include_tag 'js/jquery.dropotron.min.js' %>
+  <%= javascript_include_tag 'js/jquery.min.js' %>
+  <%= javascript_include_tag 'js/jquery.scrollgress.min.js' %>
+  <%= javascript_include_tag 'js/main.js' %>
+  <%= javascript_include_tag 'js/skel.min.js' %>
+  <%= javascript_include_tag 'js/util.js' %>
+  <%= stylesheet_link_tag "/css/main.css" %>
+  <%= stylesheet_link_tag "/css/ie8.css" %>
   <%= csrf_meta_tags %>
   <script src="js/ie/html5shiv.js"></script>
 <link rel="stylesheet" href="css/main.css" />
@@ -15,7 +25,7 @@
 					<h1><a href="index.html">Make</a>My Ride</h1>
 					<nav id="nav">
 						<ul>
-							<li><a href="index.html">Home</a></li>
+							<li><%=link_to "Home", root_path%></li>
 							<li>
 								<a href="#" class="icon fa-angle-down">Options</a>
 								<ul>
