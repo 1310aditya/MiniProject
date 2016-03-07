@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MiniProject</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'js/ie/html5shiv.js' %>
+  <%= javascript_include_tag 'js/ie/respond.min.js' %>
+  <%= javascript_include_tag 'js/jquery.dropotron.min.js' %>
+  <%= javascript_include_tag 'js/jquery.min.js' %>
+  <%= javascript_include_tag 'js/jquery.scrollgress.min.js' %>
+  <%= javascript_include_tag 'js/main.js' %>
+  <%= javascript_include_tag 'js/skel.min.js' %>
+  <%= javascript_include_tag 'js/util.js' %>
+  <%= stylesheet_link_tag "/css/main.css" %>
+  <%= stylesheet_link_tag "/css/ie8.css" %>
+  <%= csrf_meta_tags %>
+  <script src="js/ie/html5shiv.js"></script>
+<link rel="stylesheet" href="css/main.css" />
+<link rel="stylesheet" href="css/ie8.css" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<header id="header" class="alt">
+					<h1><a href="index.html">Make</a>My Ride</h1>
+					<nav id="nav">
+						<ul>
+							<li><%=link_to "Home", root_path%></li>
+							<li>
+								<a href="#" class="icon fa-angle-down">Options</a>
+								<ul>
+									<li><%= link_to "Make My Ride?", home_generic_path%></li>
+									<li><%= link_to "Contact", home_contact_path%></li>
+									<li><%= link_to "About Us", home_elements_path%></li>
+									<li>
+										<a href="#">Find Rides?</a>
+										<ul>
+											<li><a href="#">For regular office ride</a></li>
+											<li><a href="#">For a single trip</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Have a Ride to Offer?</a>
+										<ul>
+											<li><a href="#">For regular office ride</a></li>
+											<li><a href="#">For a single trip</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" class="icon fa-angle-down">Sign Up?</a>
+								<ul>
+									<li><%= link_to "Are you a User?", new_user_registration_path%></li>
+									<li><%= link_to "Are you a Cab Operator?", home_contact_path%></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</header>
+
+
+<body>
+<% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+<%= yield %>
+		<!-- Scripts -->
+			<script src="js/jquery.min.js"></script>
+			<script src="js/jquery.dropotron.min.js"></script>
+			<script src="js/jquery.scrollgress.min.js"></script>
+			<script src="js/skel.min.js"></script>
+			<script src="js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="js/main.js"></script>
+
+</body>
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; MakeMyRide. All rights reserved.</li>
+					</ul>
+				</footer>
+</html>

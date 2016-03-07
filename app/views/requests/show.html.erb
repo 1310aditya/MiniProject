@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Requester:</strong>
+  <%= @request.requester_id %>
+</p>
+
+<p>
+  <strong>P location:</strong>
+  <%= @request.p_location %>
+</p>
+
+<p>
+  <strong>P time:</strong>
+  <%= @request.p_time %>
+</p>
+
+<p>
+  <strong>D location:</strong>
+  <%= @request.d_location %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @request.status %>
+</p>
+
+<p>
+  <strong>R time:</strong>
+  <%= @request.r_time %>
+</p>
+
+<%= link_to 'Edit', edit_request_path(@request) %> |
+<%= link_to 'Back', requests_path %>
