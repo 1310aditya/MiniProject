@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :supplies
   resources :requests
-  devise_for :users
+  #devise_for :users
   resources :ratings
   #get 'home/index'
 
@@ -13,6 +13,13 @@ Rails.application.routes.draw do
   get 'home/contact'
   get 'home/generic'
   get 'home/elements'
+
+  Rails.application.routes.draw do
+      devise_for :users, controllers: {
+        sessions: 'users/sessions'
+      }
+    end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

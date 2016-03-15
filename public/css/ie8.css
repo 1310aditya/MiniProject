@@ -128,7 +128,10 @@
 		background-position: auto;
 		background-repeat: no-repeat;
 		background-size: cover;
+<<<<<<< HEAD
 		opacity: 0.75;
+=======
+>>>>>>> 44999a731777066732d5882459bb777c07f096b5
 		-ms-behavior: url("js/ie/backgroundsize.min.htc");
 	}
 
