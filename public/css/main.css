@@ -2816,7 +2816,8 @@
 			left: 1.25em;
 			line-height: inherit;
 			margin: 0;
-			padding: 0;
+			padding: 1%;
+			font-size: 200%;
 			position: absolute;
 			top: 0;
 		}
@@ -3055,7 +3056,7 @@
 		}
 
 		#banner p {
-			font-size: 1.25em;
+			font-size: 1.5em;
 			margin-bottom: 1.75em;
 		}
 

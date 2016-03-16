@@ -1,8 +1,10 @@
+<%content_for :display_supply do%>
+<section id="main" class="container 75%">
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Supplies</h1>
 
-<table>
+<table style="border: double;">
   <thead>
     <tr>
       <th>Supplier</th>
@@ -39,3 +41,5 @@
 <br>
 
 <%= link_to 'New Supply', new_supply_path %>
+</section>
+<%end%>

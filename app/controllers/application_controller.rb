@@ -15,4 +15,14 @@ class ApplicationController < ActionController::Base
       u.permit(:name, :email, :password, :password_confirmation,:add, :age,:ph)
     end
   end
+
+  layout :findme
+
+  def findme
+    if current_user.present?
+      "home"
+    else
+      "application"
+    end
+  end
 end

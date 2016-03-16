@@ -35,15 +35,15 @@
 									<li>
 										<a href="#">Find Rides?</a>
 										<ul>
-											<li><a href="#">For regular office ride</a></li>
-											<li><a href="#">For a single trip</a></li>
+											<li><a href="/supplies">For regular office ride</a></li>
+											<li><a href="/supplies">For a single trip</a></li>
 										</ul>
 									</li>
 									<li>
 										<a href="#">Have a Ride to Offer?</a>
 										<ul>
-											<li><a href="#">For regular office ride</a></li>
-											<li><a href="#">For a single trip</a></li>
+											<li><a href="/supplies/new">For regular office ride</a></li>
+											<li><a href="/supplies/new">For a single trip</a></li>
 										</ul>
 									</li>
 								</ul>
@@ -51,7 +51,7 @@
 							<li>
 								<a href="#" class="icon fa-angle-down">Sign Up?</a>
 								<ul>
-									<li><%= link_to "Are you a User?", new_user_registration_path%></li>
+									<li><%= link_to "Are you a User?", user_session_path%></li>
 									<li><%= link_to "Are you a Cab Operator?", home_contact_path%></li>
 								</ul>
 							</li>
@@ -67,7 +67,9 @@
 <% if alert %>
   <p class="alert alert-danger"><%= alert %></p>
 <% end %>
-<%= yield %>
+<%=yield%>
+
+
 		<!-- Scripts -->
 			<script src="js/jquery.min.js"></script>
 			<script src="js/jquery.dropotron.min.js"></script>
@@ -78,6 +80,9 @@
 			<script src="js/main.js"></script>
 
 </body>
+
+
+
 			<!-- Footer -->
 				<footer id="footer">
 					<ul class="icons">
