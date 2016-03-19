@@ -15,10 +15,12 @@ class SuppliesController < ApplicationController
   # GET /supplies/new
   def new
     @supply = Supply.new
+    
   end
 
   # GET /supplies/1/edit
   def edit
+    
   end
 
   # POST /supplies
@@ -69,6 +71,6 @@ class SuppliesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def supply_params
-      params.require(:supply).permit(:supplier_id, :p_location, :d_location, :p_time, :car, :rate_per_traveller, :s_available, :s_left)
+      params.require(:supply).permit(:supplier_id, :p_area, :p_sub_area, :d_area, :d_sub_area, :p_time, :car, :rate_per_traveller, :s_available, :s_left)
     end
 end

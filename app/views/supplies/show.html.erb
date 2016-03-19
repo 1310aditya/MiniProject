@@ -1,46 +1,67 @@
+<%content_for :new_supply do%>
 <section id="main" class="container 75%">
 <p id="notice"><%= notice %></p>
 
+<div class="_50">
 <p>
-  <strong>Supplier:</strong>
-  <%= @supply.supplier_id %>
+  <strong>Car Owner:</strong>
+  <%= @supply.id %>
 </p>
+</div>
 
+<div class="_50">
 <p>
-  <strong>P location:</strong>
-  <%= @supply.p_location %>
+  <strong>Start Area:</strong>
+  <%= @supply.p_area %>, <%= @supply.p_sub_area%>
 </p>
+</div>
+<br>
 
+<div class="_50">
 <p>
-  <strong>D location:</strong>
-  <%= @supply.d_location %>
+  <strong>Destination:</strong>
+  <%= @supply.d_area %>, <%= @supply.d_sub_area %>
 </p>
+<br>
+</div>
 
+<div class="_50">
 <p>
-  <strong>P time:</strong>
+  <strong>Start Time:</strong>
   <%= @supply.p_time %>
 </p>
+<br></div>
 
+<div class="_50">
 <p>
   <strong>Car:</strong>
   <%= @supply.car %>
 </p>
+</div>
+<br>
 
+<div class="_50">
 <p>
-  <strong>Rate per traveller:</strong>
+  <strong>Cost/Traveller:</strong>
   <%= @supply.rate_per_traveller %>
 </p>
-
+</div>
+<br>
+<div class="_50">
 <p>
-  <strong>S available:</strong>
+  <strong>Available Seats:</strong>
   <%= @supply.s_available %>
 </p>
-
+</div>
+<br>
+<div class="_50">
 <p>
-  <strong>S left:</strong>
+  <strong>Seats Left:</strong>
   <%= @supply.s_left %>
 </p>
-
+</div>
+<br>
 <%= link_to 'Edit', edit_supply_path(@supply) %> |
 <%= link_to 'Back', supplies_path %>
 </section>
+<%end%>
