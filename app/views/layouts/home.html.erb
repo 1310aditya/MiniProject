@@ -64,6 +64,7 @@
 		<div id="page-wrapper">
 			<!-- Banner -->
 				<section id="banner">
+							<h2>Welcome <%= current_user.name%> !<br /> </h2>	
 				</section>
 			<!-- Main -->
 				<section id="main" class="container">
@@ -77,6 +78,7 @@
 							<%=yield :edit_display%>
 							<%= yield :display_supply%>
 							<%= yield :new_supply%>	
+
 						</header>
 					</section>
 
@@ -158,4 +160,5 @@
 						<li>&copy; MakeMyRide. All rights reserved.</li>
 					</ul>
 				</footer>
+
 </html>
