@@ -1,5 +1,7 @@
-<h1>New Request</h1>
+<%content_for :request_form do%>
+<h1 style="font-size: 250%;">New Request</h1>
 
 <%= render 'form' %>
 
 <%= link_to 'Back', requests_path %>
+<%end%>

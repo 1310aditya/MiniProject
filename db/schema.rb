@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160319145924) do
+ActiveRecord::Schema.define(version: 20160321143942) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,13 +28,15 @@ ActiveRecord::Schema.define(version: 20160319145924) do
 
   create_table "requests", force: :cascade do |t|
     t.integer  "requester_id"
-    t.integer  "p_location",   limit: 8
     t.integer  "p_time"
-    t.integer  "d_location",   limit: 8
     t.boolean  "status"
     t.integer  "r_time"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "p_area"
+    t.string   "d_area"
+    t.string   "p_sub_area"
+    t.string   "d_sub_area"
   end
 
   create_table "s_reqs", force: :cascade do |t|

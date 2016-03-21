@@ -1,6 +1,8 @@
-<h1>Editing Request</h1>
+<%content_for :request_edit do%>
+<h1 style="font-size: 250%;">Editing Request</h1>
 
 <%= render 'form' %>
 
 <%= link_to 'Show', @request %> |
 <%= link_to 'Back', requests_path %>
+<%end%>

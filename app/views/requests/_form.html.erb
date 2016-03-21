@@ -11,30 +11,47 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :requester_id %><br>
-    <%= f.number_field :requester_id %>
+<div class="_25">
+    <%= f.label :Start_Area %>
+    <%= f.select :p_area, options_for_select([["Select Area", ""], "Rajinder Nagar", "Patel Nagar", "Rohini"])%>
+    <br>
   </div>
-  <div class="field">
-    <%= f.label :p_location %><br>
-    <%= f.text_field :p_location %>
+  <div class="_25">
+    <%= f.label :Start_Sub_Area %>
+    <%= f.select :p_sub_area, options_for_select([["Select sub-area", ""], "lol1", "lol2", "cd1","cd2","cd3"])%>
+    <br>
   </div>
-  <div class="field">
-    <%= f.label :p_time %><br>
-    <%= f.number_field :p_time %>
+  <div class="_25">
+    <%= f.label :Enter_Destination_Area %>
+    <%= f.select :d_area, options_for_select([["Select Area", ""], "Rajinder Nagar", "Patel Nagar", "Rohini"])%>
+    <br>
   </div>
-  <div class="field">
-    <%= f.label :d_location %><br>
-    <%= f.text_field :d_location %>
+  <div class="_25">
+    <%= f.label :Destination_Sub_Area %>
+    <%= f.select :d_sub_area, options_for_select([["Select sub-area", ""], "lol1", "lol2", "cd1","cd2","cd3"])%>
+    <br>
   </div>
+  
   <div class="field">
-    <%= f.label :status %><br>
-    <%= f.check_box :status %>
+    <%= f.hidden_field :requester_id, :value => current_user.id%>
   </div>
+  
+  <div class="_50">
+    <%= f.label :Pick_up_time %>
+    <%= f.time_field :p_time %>
+  </div>
+  
   <div class="field">
-    <%= f.label :r_time %><br>
-    <%= f.number_field :r_time %>
+    <%= f.hidden_field :status %>
   </div>
+  
+  <div class="_50">
+    <%= f.label :Return_Time %>
+    <%= f.time_field :r_time %>
+  <br>
+  <br>
+  </div>
+  <br>
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -1,16 +1,17 @@
+<%content_for :request_list do%>
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Requests</h1>
+<h1 style="font-size: 250%;">Listing Requests</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Requester</th>
-      <th>P location</th>
-      <th>P time</th>
-      <th>D location</th>
+      <th>Request Made By:</th>
+      <th>Pickup location</th>
+      <th>Pick-Up time</th>
+      <th>Destination location</th>
+      <th>Return time</th>
       <th>Status</th>
-      <th>R time</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,11 +20,11 @@
     <% @requests.each do |request| %>
       <tr>
         <td><%= request.requester_id %></td>
-        <td><%= request.p_location %></td>
+        <td><%= request.p_area %>, <%= request.p_sub_area %> </td>
         <td><%= request.p_time %></td>
-        <td><%= request.d_location %></td>
-        <td><%= request.status %></td>
+        <td><%= request.d_area %>, <%= request.d_sub_area%> </td>
         <td><%= request.r_time %></td>
+        <td><%= request.status %></td>
         <td><%= link_to 'Show', request %></td>
         <td><%= link_to 'Edit', edit_request_path(request) %></td>
         <td><%= link_to 'Destroy', request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -35,3 +36,4 @@
 <br>
 
 <%= link_to 'New Request', new_request_path %>
+<%end%>

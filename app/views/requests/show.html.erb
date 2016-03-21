@@ -1,34 +1,43 @@
+<%content_for :request_show do%>
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Requester:</strong>
+  <strong>Request Made By:</strong>
   <%= @request.requester_id %>
 </p>
+<br>
 
 <p>
-  <strong>P location:</strong>
-  <%= @request.p_location %>
+  <strong>Pickup location:</strong>
+  <%= @request.p_area %>, <%= @request.p_sub_area%>
 </p>
+<br>
 
 <p>
-  <strong>P time:</strong>
+  <strong>Pickup time:</strong>
   <%= @request.p_time %>
 </p>
 
+<br>
 <p>
   <strong>D location:</strong>
-  <%= @request.d_location %>
+  <%= @request.d_area %>, <%= @request.d_sub_area%>
 </p>
 
+<br>
+
+<p>
+  <strong>Return time:</strong>
+  <%= @request.r_time %>
+</p>
+
+<br>
 <p>
   <strong>Status:</strong>
   <%= @request.status %>
 </p>
 
-<p>
-  <strong>R time:</strong>
-  <%= @request.r_time %>
-</p>
-
+<br>
 <%= link_to 'Edit', edit_request_path(@request) %> |
 <%= link_to 'Back', requests_path %>
+<%end%>
