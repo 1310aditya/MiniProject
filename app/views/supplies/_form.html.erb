@@ -13,22 +13,22 @@
 
   <div class="_25">
     <%= f.label :Start_Area %>
-    <%= f.select :p_area, options_for_select([["Select One", ""], "Rajinder Nagar", "Patel Nagar", "Rohini"])%>
+    <%= f.select :p_area, options_for_select([["Select Area", ""], "Rajinder Nagar", "Patel Nagar", "Rohini"])%>
     <br>
   </div>
   <div class="_25">
     <%= f.label :Start_Sub_Area %>
-    <%= f.text_field :p_sub_area %>
+    <%= f.select :p_sub_area, options_for_select([["Select sub-area", ""], "lol1", "lol2", "cd1","cd2","cd3"])%>
     <br>
   </div>
   <div class="_25">
     <%= f.label :Enter_Destination_Area %>
-    <%= f.select :d_area, options_for_select([["Select One", ""], "Rajinder Nagar", "Patel Nagar", "Rohini"])%>
+    <%= f.select :d_area, options_for_select([["Select Area", ""], "Rajinder Nagar", "Patel Nagar", "Rohini"])%>
     <br>
   </div>
   <div class="_25">
     <%= f.label :Destination_Sub_Area %>
-    <%= f.text_field :d_sub_area %>
+    <%= f.select :d_sub_area, options_for_select([["Select sub-area", ""], "lol1", "lol2", "cd1","cd2","cd3"])%>
     <br>
   </div>
   <div class="_75">
@@ -38,17 +38,17 @@
   </div>
   <div class="_25">
     <%= f.label :Journey_start_time %>
-    <%= f.number_field :p_time %>
+    <%= f.time_field :p_time %>
     <br>
   </div>
   <div class="_50">
     <%= f.label :Rate_Per_Traveller %>
-    <%= f.number_field :rate_per_traveller %>
+    <%= f.number_field :rate_per_traveller%>
   <br>
   </div>
   <div class="_50">
     <%= f.label :Enter_Seats_Available %>
-    <%= f.number_field :s_available %>
+    <%= f.number_field :s_available, in: 1..10 %>
   <br>
   <br>
   </div>

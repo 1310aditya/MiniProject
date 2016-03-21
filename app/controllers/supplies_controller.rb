@@ -27,7 +27,7 @@ class SuppliesController < ApplicationController
   # POST /supplies.json
   def create
     @supply = Supply.new(supply_params)
-
+    @supply.s_left=@supply.s_available
     respond_to do |format|
       if @supply.save
         format.html { redirect_to @supply, notice: 'Supply was successfully created.' }
