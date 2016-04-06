@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160321143942) do
+ActiveRecord::Schema.define(version: 20160406131602) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20160321143942) do
     t.string   "d_area"
     t.string   "p_sub_area"
     t.string   "d_sub_area"
+    t.integer  "qn"
   end
 
   create_table "s_reqs", force: :cascade do |t|
