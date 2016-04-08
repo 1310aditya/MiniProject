@@ -1,7 +1,8 @@
 class HomeController < ApplicationController
+  
   def index
   end
-
+  
   def contact
   end
 
@@ -10,4 +11,5 @@ class HomeController < ApplicationController
 
   def elements
   end
+
 end

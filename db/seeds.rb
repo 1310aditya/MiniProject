@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Area.create(area: 'Karol Bagh')
+Area.create(area: 'Rohini')
+Area.create(area: 'Hauz Khas')
+Area.create(area: 'Nizamuddin')
+Subarea.create(subarea: '8A')
+Subarea.create(subarea: '10 Block')
+Subarea.create(subarea: '12 Block')

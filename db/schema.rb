@@ -11,10 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160406131602) do
+ActiveRecord::Schema.define(version: 20160408172719) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "areas", force: :cascade do |t|
+    t.string   "area"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "ratings", force: :cascade do |t|
     t.integer  "rating"
@@ -48,6 +54,15 @@ ActiveRecord::Schema.define(version: 20160406131602) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "subareas", force: :cascade do |t|
+    t.string   "subarea"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "area_id"
+  end
+
+  add_index "subareas", ["area_id"], name: "index_subareas_on_area_id", using: :btree
+
   create_table "supplies", force: :cascade do |t|
     t.integer  "p_time"
     t.string   "car"
@@ -60,7 +75,10 @@ ActiveRecord::Schema.define(version: 20160406131602) do
     t.string   "p_sub_area"
     t.string   "d_area"
     t.string   "d_sub_area"
+    t.integer  "user_id"
   end
+
+  add_index "supplies", ["user_id"], name: "index_supplies_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                            default: "", null: false
@@ -84,4 +102,6 @@ ActiveRecord::Schema.define(version: 20160406131602) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "subareas", "areas"
+  add_foreign_key "supplies", "users"
 end

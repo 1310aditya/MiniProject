@@ -4,18 +4,19 @@ class SuppliesController < ApplicationController
   # GET /supplies
   # GET /supplies.json
   def index
-    @supplies = Supply.all
+    @supplies =Supply.all
+    #binding.pry
   end
 
   # GET /supplies/1
   # GET /supplies/1.json
   def show
+    
   end
 
   # GET /supplies/new
   def new
     @supply = Supply.new
-    
   end
 
   # GET /supplies/1/edit

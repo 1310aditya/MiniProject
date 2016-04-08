@@ -13,22 +13,22 @@
 
 <div class="_25">
     <%= f.label :Start_Area %>
-    <%= f.select :p_area, options_for_select([["Select Area", ""], "Rajinder Nagar", "Patel Nagar", "Rohini"])%>
+    <%= f.select :p_area, options_for_select([["Select Area", ""], "Rajinder Nagar", "Patel Nagar", "Rohini", "East of Kailash", "Chittranjan Park", "Defence Colony" , "Dwarka", "Rajouri Garden", "Janak Puri", "Hauz Khas"])%>
     <br>
   </div>
   <div class="_25">
     <%= f.label :Start_Sub_Area %>
-    <%= f.select :p_sub_area, options_for_select([["Select sub-area", ""], "lol1", "lol2", "cd1","cd2","cd3"])%>
+    <%= f.select :p_sub_area, options_for_select([["Select sub-area", ""], "10 Block", "9 Block", "Sector 1","Sector 2","Sector 4", "Colony GyanKhand", "Colony Rudranagar"])%>
     <br>
   </div>
   <div class="_25">
     <%= f.label :Enter_Destination_Area %>
-    <%= f.select :d_area, options_for_select([["Select Area", ""], "Rajinder Nagar", "Patel Nagar", "Rohini"])%>
+    <%= f.select :d_area, options_for_select([["Select Area", ""], "Rajinder Nagar", "Patel Nagar", "Rohini", "East of Kailash", "Chittranjan Park", "Defence Colony" , "Dwarka", "Rajouri Garden", "Janak Puri", "Hauz Khas"])%>
     <br>
   </div>
   <div class="_25">
     <%= f.label :Destination_Sub_Area %>
-    <%= f.select :d_sub_area, options_for_select([["Select sub-area", ""], "lol1", "lol2", "cd1","cd2","cd3"])%>
+    <%= f.select :d_sub_area, options_for_select([["Select sub-area", ""], "10 Block", "9 Block", "Sector 1","Sector 2","Sector 4", "Colony GyanKhand", "Colony Rudranagar"])%>
     <br>
   </div>
   
@@ -42,7 +42,7 @@
   </div>
   
   <div class="field">
-    <%= f.hidden_field :status %>
+    <%= f.hidden_field :status, :value => FALSE %>
   </div>
   
   <div class="_50">
